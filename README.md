@@ -1,5 +1,6 @@
-# HealthTextLabsFrontEnd
-Web Platform for taking raw text as input and visualizing annotated text in the output
+# [Material-UI](http://callemall.github.io/material-ui/) - Example Webpack Project
+
+This is an example project that uses [Material-UI](http://callemall.github.io/material-ui/).
 
 ## Installation
 
@@ -14,7 +15,6 @@ Now you can run your local server:
 npm start
 ```
 Server is located at http://localhost:3000
-
 
 Note: To allow external viewing of the demo, change the following value in `webpack-dev-server.config.js`
 

@@ -1,10 +1,10 @@
 {
-  "name": "material-ui-example-webpack",
+  "name": "HealthTextLabs",
   "version": "0.16.4",
-  "description": "Sample project that uses Material-UI",
+  "description": "Front End Platform of Health Tech Labs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
+    "url": "https://github.com/praveen-g/HealthTextLabsFrontEnd.git"
   },
   "scripts": {
     "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors",
