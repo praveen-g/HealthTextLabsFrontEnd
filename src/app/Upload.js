@@ -3,25 +3,6 @@
 */
 
 import React, {Component} from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import Dialog from 'material-ui/Dialog';
-import {deepOrange500} from 'material-ui/styles/colors';
-import FlatButton from 'material-ui/FlatButton';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-
-const styles = {
-  box: {
-    textAlign: 'center',
-    paddingTop: 200,
-  },
-};
-
-const muiTheme = getMuiTheme({
-  palette: {
-    accent1Color: deepOrange500,
-  },
-});
 
 class Upload extends Component {
   constructor(props, context) {
@@ -46,37 +27,28 @@ class Upload extends Component {
 
   render() {
     const standardActions = (
-    	<div>
-    		<input type="file" type="file" name="name" />
-	        <FlatButton
-	         label="Ok"
-	         primary={true}
-	         onTouchTap={this.handleRequestClose}
-	       />
-	    </div>
+      <div>
+        <input type="file" type="file" name="name" />
+        <button onClick={this.handleRequestClose}> 
+          Upload 
+        </button>
+      </div>
     );
 
     return (
-    	<MuiThemeProvider>
 		    <div>
-		      	<Dialog
-			        open={this.state.open}
-			        title="Please select raw text file:"
-			        actions={standardActions}
-			        onRequestClose={this.handleRequestClose}
-			      	>
-		      	</Dialog>
+		      	<dialog open={this.state.open}>
+              Please select Raw Text files to upload:
+              <div>{standardActions}</div>
+		      	</dialog>
 
-		      	<div style = {styles.box}>
+		      	<div>
 			      	<h2>Upload Files</h2>
-			      	<RaisedButton
-			        	label="Browse"
-			        	secondary={true}
-			        	onTouchTap={this.handleTouchTap}
-			      	/>
-			 	</div>
+			      	<button onClick={this.handleTouchTap}>
+			        	Browse
+			      	</button>
+			 	    </div>
 		    </div>
-		</MuiThemeProvider>
     );
   }
 }
