@@ -32,6 +32,7 @@ class Upload extends Component {
         <button onClick={this.handleRequestClose}> 
           Upload 
         </button>
+
       </div>
     );
 
@@ -44,7 +45,7 @@ class Upload extends Component {
 
 		      	<div>
 			      	<h2>Upload Files</h2>
-			      	<button onClick={this.handleTouchTap}>
+			      	<button class="mdl-button mdl-js-button mdl-button--raised" onClick={this.handleTouchTap}>
 			        	Browse
 			      	</button>
 			 	    </div>
