@@ -1,7 +1,6 @@
 /*
 * Created by Praveen Gupta
 */
-
 import React, {Component} from 'react';
 
 class Upload extends Component {
