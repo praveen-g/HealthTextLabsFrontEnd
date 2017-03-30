@@ -15,8 +15,6 @@ class Document extends Component {
     }
 
 
-
-
     render() {
 
         return (
@@ -31,6 +29,7 @@ class Document extends Component {
             defaultText: 'Upload Files',
             defaultEnts: []
         });
+        const t2=""
         const text = 'When Sebastian Thrun started working on self-driving cars at Google in 2007, few people outside of the company took him seriously.';
         const spans = [{end: 20, start: 5, type: "PERSON"}, {end: 67, start: 61, type: "ORG"}, {
             end: 75,

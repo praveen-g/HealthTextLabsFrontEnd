@@ -2,7 +2,7 @@
  * Created by sasinda on 3/30/17.
  */
 import React, {Component} from 'react';
-
+import Upload from './Upload.js'
 import TextField from 'material-ui/TextField';
 import IconMenu from 'material-ui/IconMenu';
 import IconButton from 'material-ui/IconButton';
@@ -24,39 +24,30 @@ class Header extends Component {
     handleChange = (event, index, value) => this.setState({value});
 
     render() {
+        var search_style={
+            width:"50%"
+        }
         return (
             <div className="App-header">
                 <Toolbar>
                     <ToolbarTitle text="HTL"/>
-
-                    <TextField
-                        hintText="Search"
-                        width='50%'
-                        />
-                    <FontIcon className="face"/>
-
-                    <ToolbarGroup firstChild={true}>
-                        <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-                            <MenuItem value={1} primaryText="All Broadcasts"/>
-                            <MenuItem value={2} primaryText="All Voice"/>
-                            <MenuItem value={3} primaryText="All Text"/>
-                            <MenuItem value={4} primaryText="Complete Voice"/>
-                            <MenuItem value={5} primaryText="Complete Text"/>
-                            <MenuItem value={6} primaryText="Active Voice"/>
-                            <MenuItem value={7} primaryText="Active Text"/>
-                        </DropDownMenu>
+                    <ToolbarGroup style={search_style}>
+                        <TextField   fullWidth={true} hintText="Search"/>
+                        <IconButton tooltip="search by case, patient etc">
+                            <FontIcon className="fa fa-search"></FontIcon>
+                        </IconButton>
                     </ToolbarGroup>
+
+
                     <ToolbarGroup>
-
-
                         <ToolbarSeparator />
-                        <RaisedButton label="New Case" primary={true}/>
+                        <Upload label="New Case"/>
                         <IconMenu
                             iconButtonElement={
-              <IconButton touch={true}>
-                <NavigationExpandMoreIcon />
-              </IconButton>
-            }
+                                <IconButton touch={true}>
+                                <NavigationExpandMoreIcon />
+                              </IconButton>
+                             }
                             >
                             <MenuItem primaryText="Download"/>
                             <MenuItem primaryText="More Info"/>
