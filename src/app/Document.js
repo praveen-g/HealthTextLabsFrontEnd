@@ -18,12 +18,19 @@ class Document extends Component {
 
 
     render() {
+
+        return (
+            <div id="displacy">HI</div>
+
+        );
+    }
+
+    componentDidMount(){
         const displacy = new displaCyENT('http://localhost:8000', {
             container: '#displacy',
             defaultText: 'Upload Files',
             defaultEnts: []
         });
-
         const text = 'When Sebastian Thrun started working on self-driving cars at Google in 2007, few people outside of the company took him seriously.';
         const spans = [{end: 20, start: 5, type: "PERSON"}, {end: 67, start: 61, type: "ORG"}, {
             end: 75,
@@ -31,12 +38,7 @@ class Document extends Component {
             type: "DATE"
         }];
         const ents = ['person', 'org', 'gpe', 'loc', 'product'];
-
         displacy.render(text, spans, ents);
-
-        return (
-            <div id="annotated_doc">HI</div>
-        );
     }
 }
 export default Document;
