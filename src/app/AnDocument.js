@@ -5,7 +5,7 @@ import displaCyENT from 'displacy-ent'
 import React, {Component} from 'react';
 
 
-class Dashboard extends Component {
+class AnDocument extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -39,4 +39,4 @@ class Dashboard extends Component {
         displacy.render(text, spans, ents);
     }
 }
-export default Dashboard;
+export default AnDocument;
