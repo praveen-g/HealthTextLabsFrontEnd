@@ -1,7 +1,6 @@
 /**
  * Created by sasinda on 3/30/17.
  */
-
 import React, {Component} from 'react';
 import Upload from './Upload.js'
 import TextField from 'material-ui/TextField';
@@ -10,6 +9,8 @@ import IconButton from 'material-ui/IconButton';
 import FontIcon from 'material-ui/FontIcon';
 import NavigationExpandMoreIcon from 'material-ui/svg-icons/navigation/expand-more';
 import MenuItem from 'material-ui/MenuItem';
+import DropDownMenu from 'material-ui/DropDownMenu';
+import RaisedButton from 'material-ui/RaisedButton';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
 
 class Header extends Component {
@@ -29,7 +30,7 @@ class Header extends Component {
         return (
             <div className="App-header">
                 <Toolbar>
-                    <ToolbarTitle text="HTL"/>
+                    <ToolbarTitle text="H T L." style={{color: '#1565C0'}}/>
                     <ToolbarGroup style={search_style}>
                         <TextField   fullWidth={true} hintText="Search"/>
                         <IconButton tooltip="search by case, patient etc">
@@ -53,6 +54,7 @@ class Header extends Component {
                         </IconMenu>
                     </ToolbarGroup>
                 </Toolbar>
+                
             </div>
 
 
@@ -62,4 +64,5 @@ class Header extends Component {
 
 }
 export default Header;
+
 
