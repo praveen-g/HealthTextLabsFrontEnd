@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import './../www/App.css';
 import Header from './Header'
+import Dashboard from './Dashboard'
+
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
+
 //Import ui components
 import {
   blue400, blue800,
@@ -39,7 +42,7 @@ class App extends Component {
             <MuiThemeProvider muiTheme={muiTheme}>
                 <div className="App">
                     <Header/>
-
+                    <Dashboard/>
                 </div>
             </MuiThemeProvider>
         );

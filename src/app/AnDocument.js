@@ -1,7 +1,7 @@
 /*
 * Created by Praveen Gupta
 */
-import displaCyENT from 'displacy-ent'
+import displaCyENT from './displacyENT'
 import React, {Component} from 'react';
 
 
