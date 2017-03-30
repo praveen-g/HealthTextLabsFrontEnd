@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import './../www/App.css';
-import Upload from './Upload'
+import Header from './Header'
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+//Import ui components
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
+
+
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Health Text Labs</h2>
-        </div>
-        <Upload />
-      </div>
-    );
-  }
+    
+    render() {
+        return (
+            <MuiThemeProvider>
+                <div className="App">
+                    <Header/>
+                </div>
+            </MuiThemeProvider>
+        );
+    }
 }
 
 export default App;

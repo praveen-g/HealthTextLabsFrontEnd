@@ -1,56 +1,42 @@
 /*
 * Created by Praveen Gupta
 */
-
+import displaCyENT from 'displacy-ent'
 import React, {Component} from 'react';
 
+
 class Dashboard extends Component {
-  constructor(props, context) {
-    super(props, context);
+    constructor(props, context) {
+        super(props, context);
+        this.state = {
+            open: false,
+        };
+    }
 
-    this.state = {
-      open: false,
-    };
-  }
 
-  handleRequestClose = () => {
-    this.setState({
-      open: false,
-    });
-  }
+    render() {
 
-  handleTouchTap = () => {
-    this.setState({
-      open: true,
-    });
-  }
+        return (
+            <div id="displacy">HI</div>
 
-  render() {
-    const standardActions = (
-      <div>
-        <input type="file" name="name" />
-        <button onClick={this.handleRequestClose}> 
-          Upload 
-        </button>
-      </div>
-    );
+        );
+    }
 
-    return (
-		    <div>
-		      	<dialog open={this.state.open}>
-              Please select Raw Text files to upload:
-              <div>{standardActions}</div>
-		      	</dialog>
-
-		      	<div>
-			      	<h2>Upload Files</h2>
-			      	<button onClick={this.handleTouchTap}>
-			        	Browse
-			      	</button>
-			 	    </div>
-		    </div>
-    );
-  }
+    componentDidMount(){
+        const displacy = new displaCyENT('http://localhost:8000', {
+            container: '#displacy',
+            defaultText: 'Upload Files',
+            defaultEnts: []
+        });
+        const t2=""
+        const text = 'When Sebastian Thrun started working on self-driving cars at Google in 2007, few people outside of the company took him seriously.';
+        const spans = [{end: 20, start: 5, type: "PERSON"}, {end: 67, start: 61, type: "ORG"}, {
+            end: 75,
+            start: 71,
+            type: "DATE"
+        }];
+        const ents = ['person', 'org', 'gpe', 'loc', 'product'];
+        displacy.render(text, spans, ents);
+    }
 }
-
 export default Dashboard;
