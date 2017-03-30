@@ -4,7 +4,7 @@
 
 import React, {Component} from 'react';
 
-class Upload extends Component {
+class Dashboard extends Component {
   constructor(props, context) {
     super(props, context);
 
@@ -53,4 +53,4 @@ class Upload extends Component {
   }
 }
 
-export default Upload;
+export default Dashboard;
