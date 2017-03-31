@@ -3,7 +3,6 @@
  */
 import React, {Component} from 'react';
 
-import TextField from 'material-ui/TextField';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
 
 class ProcedureInfo extends Component {

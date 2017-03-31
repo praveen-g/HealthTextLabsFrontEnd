@@ -13,7 +13,9 @@ class Dashboard extends Component {
 
     	var half_box_style={
             width:"40%",
-            float:'left'
+            float:'left',
+            paddingLeft:'3.75%',
+            paddingRight:'3.75%'
         }
         var full_box_style={
             width:"100%",
@@ -22,7 +24,6 @@ class Dashboard extends Component {
 
         var timelineStyle={
             paddingTop:"5%",
-            width:"5%",
             float:"left",
         }
 

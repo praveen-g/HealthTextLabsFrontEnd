@@ -7,7 +7,6 @@ import {
   Step,
   Stepper,
   StepLabel,
-  StepContent,
 } from 'material-ui/Stepper';
 import FontIcon from 'material-ui/FontIcon';
 import RaisedButton from 'material-ui/RaisedButton';
@@ -16,7 +15,7 @@ import {
   blue400,
 } from 'material-ui/styles/colors';
 
-class VerticalTimeLine extends React.Component {
+class VerticalTimeLine extends Component {
 
   state = {
     stepIndex: 0,
