@@ -4,6 +4,7 @@
 
 import React, {Component} from 'react';
 import AnDocument from './AnDocument';
+import InfoBoxes from './InfoBoxes'
 
 class Dashboard extends Component {
     constructor(props) {
@@ -14,15 +15,24 @@ class Dashboard extends Component {
     }
 
     render() {
-    	var docuStyle={
-            width:"40%"
+    	var half_box_style={
+            width:"50%",
+            float:'left'
+        }
+        var full_box_style={
+            width:"100%",
+            float:'left'
         }
 
         return (
         	<div>
-	            <div style={docuStyle}>
+	            <div style={half_box_style}>
 	                <AnDocument/>
 	            </div>
+                <div style={half_box_style}>
+                    <InfoBoxes/>
+                </div>
+
 	        </div>
         );
     }

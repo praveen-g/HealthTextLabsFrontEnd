@@ -3,7 +3,7 @@
 */
 import displaCyENT from './displacyENT'
 import React, {Component} from 'react';
-
+import Paper from 'material-ui/Paper';
 
 
 class AnDocument extends Component {
@@ -14,10 +14,11 @@ class AnDocument extends Component {
         };
     }
 
-
     render() {
         return (
-           <div id="displacy">Loading...</div>
+            <Paper zDepth={3}>
+                <div id="displacy">Loading...</div>
+            </Paper>
         );
     }
 
