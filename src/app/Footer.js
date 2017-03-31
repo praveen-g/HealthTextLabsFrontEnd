@@ -40,7 +40,8 @@ class Footer extends Component {
 
     render() {
         var footer_style = {
-            position: "absolute; bottom:0px"
+            position: "absolute; bottom:0px",
+            color: '#1565C0'
         }
 
         var nav = <Paper zDepth={2} className='footer'>

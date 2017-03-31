@@ -12,6 +12,7 @@ class Dashboard extends Component {
     render() {
 
     	var half_box_style={
+            paddingTop:"1%",
             width:"40%",
             float:'left',
             paddingLeft:'3.75%',
@@ -23,7 +24,7 @@ class Dashboard extends Component {
     	}
 
         var timelineStyle={
-            paddingTop:"5%",
+            paddingTop:"3%",
             float:"left",
         }
 
