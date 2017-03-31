@@ -22,7 +22,7 @@ const muiTheme = getMuiTheme({
     accent1Color: indigo500,
     accent2Color: grey100,
     accent3Color: grey500,
-    textColor: darkBlack,
+    textColor: blue800,
     alternateTextColor: white,
     canvasColor: white,
     borderColor: grey300,
@@ -30,7 +30,7 @@ const muiTheme = getMuiTheme({
     shadowColor: fullBlack,
   },
 });
-
+var Dropzone = require('react-dropzone');
 
 class App extends Component {
     
@@ -39,7 +39,11 @@ class App extends Component {
             <MuiThemeProvider muiTheme={muiTheme}>
                 <div className="App">
                     <Header/>
-
+                    <div style={{display: 'flex', justifyContent: 'center'}}>
+                    <Dropzone onDrop={this.onDrop}>
+                        <div class="center">Try dropping some files here, or click to select files to upload.</div>
+                    </Dropzone>
+                    </div>
                 </div>
             </MuiThemeProvider>
         );
