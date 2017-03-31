@@ -28,15 +28,14 @@ class Header extends Component {
         return (
             <div className="App-header">
                 <Toolbar>
-                    <ToolbarTitle text="H T L." style={{color: '#1565C0'}}/>
+                    <ToolbarTitle text="H T L." style={{color: '#1565C0', fontWeight: "bold"}}/>
                     <ToolbarGroup style={search_style}>
                         <TextField   fullWidth={true} hintText="Search"/>
                         <IconButton tooltip="search by case, patient etc">
                             <FontIcon className="fa fa-search"></FontIcon>
                         </IconButton>
                     </ToolbarGroup>
-
-
+                    
                     <ToolbarGroup>
                         <ToolbarSeparator />
                         <Upload label="New Case"/>
@@ -45,20 +44,15 @@ class Header extends Component {
                                 <IconButton touch={true}>
                                 <NavigationExpandMoreIcon />
                               </IconButton>
-                             }
-                            >
+                             }>
                             <MenuItem primaryText="Download"/>
                             <MenuItem primaryText="More Info"/>
                         </IconMenu>
                     </ToolbarGroup>
                 </Toolbar>
-                
             </div>
-
-
         );
     }
-
 
 }
 export default Header;

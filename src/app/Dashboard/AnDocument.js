@@ -1,7 +1,6 @@
 /*
 * Created by Praveen Gupta
 */
-import displaCyENT from './displacyENT'
 import React, {Component} from 'react';
 import Paper from 'material-ui/Paper';
 

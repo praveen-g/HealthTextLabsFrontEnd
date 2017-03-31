@@ -5,14 +5,9 @@
 import React, {Component} from 'react';
 import AnDocument from './AnDocument';
 import InfoBoxes from './InfoBoxes'
+import VerticalTimeLine from './VerticalTimeline'
 
 class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-        // this.state = {
-        //     value: 3,
-        // };
-    }
 
     render() {
     	var half_box_style={
@@ -24,6 +19,12 @@ class Dashboard extends Component {
             float:'left'
         }
 
+        // var timelineStyle={
+        //     width:"10%",
+        //     float:"left",
+        //     display:"inline"
+        // }
+
         return (
         	<div>
 	            <div style={half_box_style}>
@@ -33,6 +34,9 @@ class Dashboard extends Component {
                     <InfoBoxes/>
                 </div>
 
+                <div>
+                    <VerticalTimeLine />
+                </div>
 	        </div>
         );
     }
