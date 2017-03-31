@@ -4,7 +4,6 @@
 import React, {Component} from 'react';
 import Paper from 'material-ui/Paper';
 
-
 class AnDocument extends Component {
     constructor(props, context) {
         super(props, context);
@@ -30,7 +29,6 @@ class AnDocument extends Component {
         var el = document.getElementById("displacy")
         el.innerHTML= this.state.markup
     }
-
 
 }
 export default AnDocument;

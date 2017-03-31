@@ -10,33 +10,37 @@ import VerticalTimeLine from './VerticalTimeline'
 class Dashboard extends Component {
 
     render() {
+
     	var half_box_style={
-            width:"50%",
+            width:"40%",
             float:'left'
         }
         var full_box_style={
             width:"100%",
             float:'left'
-        }
+    	}
 
-        // var timelineStyle={
-        //     width:"10%",
-        //     float:"left",
-        //     display:"inline"
-        // }
+        var timelineStyle={
+            paddingTop:"5%",
+            width:"5%",
+            float:"left",
+        }
 
         return (
         	<div>
 	            <div style={half_box_style}>
 	                <AnDocument/>
 	            </div>
+
+                <div style={timelineStyle}>
+                    <VerticalTimeLine />
+                </div>
+
                 <div style={half_box_style}>
                     <InfoBoxes/>
                 </div>
 
-                <div>
-                    <VerticalTimeLine />
-                </div>
+                
 	        </div>
         );
     }
