@@ -15,7 +15,7 @@ class Dashboard extends Component {
 
     render() {
     	var docuStyle={
-            width:"40%"
+            width:"45%",
         }
 
         return (
