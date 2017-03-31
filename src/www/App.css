@@ -60,10 +60,10 @@
 }
 
 .bottom_pannel {
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 56px;
+    margin-bottom: 50px;
     width: 100%;
-    height: 70%;
+    height: 90%;
     position: fixed;
     bottom: 100px;
 }
