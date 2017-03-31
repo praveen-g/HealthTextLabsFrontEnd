@@ -34,7 +34,7 @@ class Header extends Component {
                     <ToolbarGroup style={search_style}>
                         <TextField   fullWidth={true} hintText="Search"/>
                         <IconButton tooltip="search by case, patient etc">
-                            <FontIcon className="fa fa-search" style={{width = '5px'}}></FontIcon>
+                            <FontIcon className="fa fa-search"></FontIcon>
                         </IconButton>
                     </ToolbarGroup>
 

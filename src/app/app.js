@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import './../www/App.css';
 import Header from './Header'
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import FontIcon from 'material-ui/FontIcon';
 injectTapEventPlugin();
 //Import ui components
 import {
   blue400, blue800,
   indigo500,
   grey100, grey300, grey400, grey500,
-  white, darkBlack, fullBlack,
+  white, fullBlack,
 } from 'material-ui/styles/colors';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
@@ -39,9 +40,13 @@ class App extends Component {
             <MuiThemeProvider muiTheme={muiTheme}>
                 <div className="App">
                     <Header/>
-                    <div style={{display: 'flex', justifyContent: 'center'}}>
+
+                    <div style={{display: 'flex', justifyContent: 'center', marginTop: '150px'}}>
                     <Dropzone onDrop={this.onDrop}>
-                        <div class="center">Try dropping some files here, or click to select files to upload.</div>
+                        <FontIcon className="fa fa-upload" style={{marginTop: '20px'}}></FontIcon>
+                        <div style={{marginTop: '20px', marginLeft: '15px', marginRight: '15px',fontSize: '20px', color:muiTheme.palette.accent3Color}}>
+                        Try dropping some files here, or click to select files to upload.
+                        </div>
                     </Dropzone>
                     </div>
                 </div>
