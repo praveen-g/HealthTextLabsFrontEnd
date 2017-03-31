@@ -26,7 +26,7 @@ class Header extends Component {
             width:"50%"
         }
         return (
-            <div className="App-header">
+            <div className="header">
                 <Toolbar>
                     <ToolbarTitle text="H T L." style={{color: '#1565C0', fontWeight: "bold"}}/>
                     <ToolbarGroup style={search_style}>
