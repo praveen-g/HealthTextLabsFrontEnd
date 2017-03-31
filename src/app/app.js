@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './../www/App.css';
-import Header from './Header'
+import Header from './Header';
+import ProgressBar from './ProgressBar';
+import Summary from './Summary';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import FontIcon from 'material-ui/FontIcon';
 injectTapEventPlugin();
@@ -42,13 +44,15 @@ class App extends Component {
                     <Header/>
 
                     <div style={{display: 'flex', justifyContent: 'center', marginTop: '150px'}}>
-                    <Dropzone onDrop={this.onDrop}>
-                        <FontIcon className="fa fa-upload" style={{marginTop: '20px'}}></FontIcon>
-                        <div style={{marginTop: '20px', marginLeft: '15px', marginRight: '15px',fontSize: '20px', color:muiTheme.palette.accent3Color}}>
-                        Try dropping some files here, or click to select files to upload.
-                        </div>
-                    </Dropzone>
+                        <Dropzone onDrop={this.onDrop}>
+                            <FontIcon className="fa fa-upload" style={{marginTop: '20px'}}></FontIcon>
+                            <div style={{marginTop: '20px', marginLeft: '15px', marginRight: '15px',fontSize: '20px', color:muiTheme.palette.accent3Color}}>
+                                Try dropping some files here, or click to select files to upload.
+                            </div>
+                        </Dropzone>
                     </div>
+                    <ProgressBar/>
+                    <Summary/>
                 </div>
             </MuiThemeProvider>
         );
