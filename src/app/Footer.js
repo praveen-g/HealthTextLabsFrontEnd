@@ -7,7 +7,8 @@ import {BottomNavigation, BottomNavigationItem} from 'material-ui/BottomNavigati
 import Paper from 'material-ui/Paper';
 import Popover from 'material-ui/Popover';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
-
+import PatientTimeline from './bottomNav/PatientTimeline'
+import SplitPane from 'react-split-pane'
 const calendarIcon = <FontIcon className="fa fa-calendar"></FontIcon>;
 const favoritesIcon = <FontIcon className="material-icons">favorite</FontIcon>;
 const nearbyIcon = <IconLocationOn />;
@@ -42,7 +43,7 @@ class Footer extends Component {
             position: "absolute; bottom:0px"
         }
 
-        var nav=<Paper zDepth={2} className='footer' >
+        var nav = <Paper zDepth={2} className='footer'>
             <BottomNavigation selectedIndex={this.state.selectedIndex} ref={(e) => { this.state.anchorEl = e; }}>
                 <BottomNavigationItem
                     label="Timeline"
@@ -61,14 +62,14 @@ class Footer extends Component {
                     open={this.state.timeLine_open}
                     anchorEl={this.state.anchorEl}
                     anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
-                    targetOrigin={{horizontal: 'left', vertical: 'top'}}
+                    targetOrigin={{horizontal: 'middle', vertical: 'bottom'}}
                     onRequestClose={this.handleTimeLineClose}
                     >
                     <Paper zDepth={2}>
-
+                        <PatientTimeline/>
                     </Paper>
                 </Popover>
-           </div>
+            </div>
 
         );
     }

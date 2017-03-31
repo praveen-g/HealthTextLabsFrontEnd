@@ -14,9 +14,14 @@ class AnDocument extends Component {
     }
 
     render() {
+        var style={
+            textAlign: 'left',
+            padding:'2%',
+
+        }
         return (
-            <Paper zDepth={3}>
-                <div id="displacy">Loading...</div>
+            <Paper zDepth={1}>
+                <div id="displacy" style={style}>Loading...</div>
             </Paper>
         );
     }

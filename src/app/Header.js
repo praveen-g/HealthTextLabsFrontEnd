@@ -25,9 +25,12 @@ class Header extends Component {
         var search_style={
             width:"50%"
         }
+        var hearer_style={
+            height:60
+        }
         return (
-            <div className="header">
-                <Toolbar>
+            <div style={hearer_style}>
+                <Toolbar className="header">
                     <ToolbarTitle text="H T L." style={{color: '#1565C0', fontWeight: "bold"}}/>
                     <ToolbarGroup style={search_style}>
                         <TextField   fullWidth={true} hintText="Search"/>
