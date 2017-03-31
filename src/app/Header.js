@@ -11,7 +11,9 @@ import NavigationExpandMoreIcon from 'material-ui/svg-icons/navigation/expand-mo
 import MenuItem from 'material-ui/MenuItem';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import RaisedButton from 'material-ui/RaisedButton';
+import Badge from 'material-ui/Badge';
 import {Toolbar, ToolbarGroup, ToolbarSeparator, ToolbarTitle} from 'material-ui/Toolbar';
+import NotificationsIcon from 'material-ui/svg-icons/social/notifications';
 
 class Header extends Component {
     constructor(props) {
@@ -52,16 +54,24 @@ class Header extends Component {
                             <MenuItem primaryText="Download"/>
                             <MenuItem primaryText="More Info"/>
                         </IconMenu>
+                        <div>
+                            <Badge
+                            badgeContent={8}
+                            secondary={true}
+                            badgeStyle={{top: 18, right: 8}}
+                            >
+                            <IconButton tooltip="Notifications">
+                            <NotificationsIcon />
+                            </IconButton>
+                            </Badge>
+                        </div>
                     </ToolbarGroup>
                 </Toolbar>
                 
             </div>
 
-
         );
     }
-
-
 }
 export default Header;
 
