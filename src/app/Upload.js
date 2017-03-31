@@ -7,6 +7,10 @@ import Dialog from 'material-ui/Dialog';
 import FlatButton from 'material-ui/FlatButton';
 import RaisedButton from 'material-ui/RaisedButton';
 
+const style = {
+  margin: 12,
+};
+
 class Upload extends Component {
     constructor(props, context) {
         super(props, context);
@@ -25,18 +29,19 @@ class Upload extends Component {
 
     render() {
         const actions = [
-            <RaisedButton children={<input type="file" name="name"/>}/>
+            <input type="file" name="name"/>
             ,
-            <FlatButton
+            <RaisedButton
                 label="Upload"
                 primary={true}
-                keyboardFocused={true}
                 onTouchTap={this.handleClose}
+                style={style}
                 />,
-            <FlatButton
+            <RaisedButton
                 label="Cancel"
-                primary={true}
+                secondary={true}
                 onTouchTap={this.handleClose}
+                style={style}
                 />,
             ]
 

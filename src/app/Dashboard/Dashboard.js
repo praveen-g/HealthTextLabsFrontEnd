@@ -4,25 +4,31 @@
 
 import React, {Component} from 'react';
 import AnDocument from './AnDocument';
+import VerticalTimeLine from './VerticalTimeline'
 
 class Dashboard extends Component {
-    constructor(props) {
-        super(props);
-        // this.state = {
-        //     value: 3,
-        // };
-    }
 
     render() {
     	var docuStyle={
-            width:"40%"
+            //width:"45%",
+            // float:"left",
+            // display:"inline"
         }
+
+        // var timelineStyle={
+        //     width:"10%",
+        //     float:"left",
+        //     display:"inline"
+        // }
 
         return (
         	<div>
 	            <div style={docuStyle}>
 	                <AnDocument/>
 	            </div>
+                <div>
+                    <VerticalTimeLine />
+                </div>
 	        </div>
         );
     }
