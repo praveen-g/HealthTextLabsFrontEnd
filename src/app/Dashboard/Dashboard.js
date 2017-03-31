@@ -13,10 +13,10 @@ class Dashboard extends Component {
 
     	var half_box_style={
             paddingTop:"1%",
-            width:"40%",
+            width:"45%",
             float:'left',
-            paddingLeft:'3.75%',
-            paddingRight:'3.75%'
+            paddingLeft:'1.25%',
+            paddingRight:'1.25%'
         }
         var full_box_style={
             width:"100%",
