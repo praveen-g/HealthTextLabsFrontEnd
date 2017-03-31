@@ -9,6 +9,9 @@ import ProcedureInfo from './../Dashboard/ProcedureInfo'
 import OtherInfo from './../Dashboard/OtherInfo'
 
 import Paper from 'material-ui/Paper';
+import './../../www/patient_timeline.css';
+
+var vis=require('vis')
 
 class PatientTimeline extends Component {
     constructor(props) {
@@ -24,8 +27,8 @@ class PatientTimeline extends Component {
     }
 
     componentDidMount() {
-        container_id='patient_time_line'
-        timeline=drawTimeline(container_id)
+        var container_id='patient_time_line'
+        var timeline=this.drawTimeline(container_id)
         document.getElementById(
             'timeline'
         ).onclick = function (event) {
@@ -37,7 +40,7 @@ class PatientTimeline extends Component {
     }
 
 
-    function drawTimeline(container_id) {
+    drawTimeline(container_id) {
 
         var groups = new vis.DataSet([
             {
@@ -649,7 +652,7 @@ class PatientTimeline extends Component {
             margin: {item: 10},
 
 
-            onUpdate: function (items, callback) {
+            onUpdate: function (item, callback) {
                 item.content = prompt('Edit items text:', item.content);
                 if (item.content != null) {
                     callback(item); // send back adjusted item
