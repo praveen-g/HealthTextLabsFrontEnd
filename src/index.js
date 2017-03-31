@@ -8,6 +8,5 @@ ReactDOM.render(
 	  <HashRouter>
 	    <Route path='/' component={App} />
 	  </HashRouter>,
-
   document.getElementById('root')
 )

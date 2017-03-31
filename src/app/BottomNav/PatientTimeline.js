@@ -30,7 +30,7 @@ class PatientTimeline extends Component {
         var container_id='patient_time_line'
         var timeline=this.drawTimeline(container_id)
         document.getElementById(
-            'timeline'
+            container_id
         ).onclick = function (event) {
             var props = timeline.getEventProperties(event)
             console.log(props);
@@ -642,7 +642,7 @@ class PatientTimeline extends Component {
             autoResize: true,
             clickToUse: true,
             width: '100%',
-            height: '800px',
+            height: screen.height-200,
             moveable: true,
             multiselect: true,
             orientation: 'bottom',
