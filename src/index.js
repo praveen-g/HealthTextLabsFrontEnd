@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './www/index.css';
-import {HashRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, IndexRoute} from 'react-router-dom';
 import App from './app/App';
+import Dashboard from './app/Dashboard/Dashboard'
 
 ReactDOM.render(
-	  <HashRouter>
-	    <Route path='/' component={App} />
-	  </HashRouter>,
-  document.getElementById('root')
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>,
+    document.getElementById('root')
 )

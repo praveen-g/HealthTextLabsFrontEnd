@@ -10,7 +10,7 @@ import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import PatientTimeline from './bottomNav/PatientTimeline'
 import SplitPane from 'react-split-pane'
 const calendarIcon = <FontIcon className="fa fa-calendar"></FontIcon>;
-const favoritesIcon = <FontIcon className="material-icons">favorite</FontIcon>;
+const dashboardIcon = <FontIcon className="fa fa-dashboard"></FontIcon>;
 const nearbyIcon = <IconLocationOn />;
 
 /**
@@ -22,6 +22,7 @@ class Footer extends Component {
     state = {
         selectedIndex: 0,
         timeLine_open: false,
+        dashboard_open: false,
         anchorEl: null,
     };
 
@@ -29,12 +30,20 @@ class Footer extends Component {
         this.setState({selectedIndex: index});
         if (index == 0) {
             this.setState({timeLine_open: !this.state.timeLine_open});
+        }else if(index ==1){
+            this.setState({dashboard_open: !this.state.dashboard_open});
         }
     }
 
     handleTimeLineClose = () => {
         this.setState({
             timeLine_open: false,
+        });
+    };
+
+    handleDashClose = () => {
+        this.setState({
+            dashboard_open: false,
         });
     };
 
@@ -50,6 +59,11 @@ class Footer extends Component {
                     label="Timeline"
                     icon={calendarIcon}
                     onTouchTap={() => this.select(0)}
+                    />
+                <BottomNavigationItem
+                    label="Dashboard"
+                    icon={dashboardIcon}
+                    onTouchTap={() => this.select(1)}
                     />
 
             </BottomNavigation>
@@ -68,6 +82,19 @@ class Footer extends Component {
                     >
                     <Paper zDepth={2}>
                         <PatientTimeline/>
+                    </Paper>
+                </Popover>
+
+                <Popover
+                    className='bottom_pannel'
+                    open={this.state.dashboard_open}
+                    anchorEl={this.state.anchorEl}
+                    anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+                    targetOrigin={{horizontal: 'middle', vertical: 'bottom'}}
+                    onRequestClose={this.handleDashClose}
+                    >
+                    <Paper zDepth={2}>
+
                     </Paper>
                 </Popover>
             </div>

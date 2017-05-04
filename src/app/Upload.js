@@ -24,6 +24,7 @@ class Upload extends Component {
 
     handleClose = () => {
         this.setState({open: false});
+
     };
 
     render() {

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import {Switch, Route} from 'react-router-dom';
 import './../www/App.css';
 import './../www/document.css';
 import Header from './Header'
 import Dashboard from './Dashboard/Dashboard'
 import Footer from './Footer'
+import DDUpload from './upload/DZUpload.js'
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import FontIcon from 'material-ui/FontIcon';
@@ -37,18 +39,7 @@ const muiTheme = getMuiTheme({
     shadowColor: fullBlack,
   },
 });
-//var Dropzone = require('react-dropzone');
-//<Paper style={docuStyle} zDepth={1} >
-//    <Dashboard/>
-//</Paper>
-//<div style={{display: 'flex', justifyContent: 'center', marginTop: '150px'}}>
-//<Dropzone onDrop={this.onDrop}>
-//    <FontIcon className="fa fa-upload" style={{marginTop: '20px'}}></FontIcon>
-//    <div style={{marginTop: '20px', marginLeft: '15px', marginRight: '15px',fontSize: '20px', color:muiTheme.palette.accent3Color}}>
-//    Try dropping some files here, or click to select files to upload.
-//    </div>
-//</Dropzone>
-//</div>
+
 
 var docuStyle={
     marginTop: '20px',
@@ -66,12 +57,13 @@ class App extends Component {
             <MuiThemeProvider muiTheme={muiTheme}>
                 <div className="App">
                     <Header/>
-                    <Dashboard/>
+                    <Switch>
+                        <Route exact path='/' component={DDUpload}/>
+                        <Route path='/dash' component={Dashboard}/>
+                    </Switch>
                     <Footer/>
                 </div>
             </MuiThemeProvider>
         );
     }
-}
-
-export default App;
+}export default App;
