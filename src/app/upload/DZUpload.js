@@ -35,8 +35,9 @@ class DZUpload extends Component {
                         <FontIcon className="fa fa-upload" style={{marginTop: '20px'}}></FontIcon>
                         <div
                             style={{marginTop: '20px', marginLeft: '15px', marginRight: '15px',fontSize: '20px'}}>
-                            Try dropping some files here, or click to select files to upload.
+                            Please drop your patient documents here.
                         </div>
+                        <FontIcon className="fa fa-4x fa-file-text-o" style={{marginTop: '20px'}}></FontIcon>
                     </Dropzone>
                 </div>
             </Paper>

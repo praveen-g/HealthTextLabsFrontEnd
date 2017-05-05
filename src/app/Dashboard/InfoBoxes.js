@@ -28,16 +28,7 @@ class InfoBoxes extends Component {
         }
         return (
             <div>
-                <div style={half_box_style}>
-                    <Paper zDepth={1}>
-                        <PatientInfo/>
-                    </Paper>
-                </div>
-                <div style={half_box_style}>
-                    <Paper zDepth={1}>
-                        <InsuranceInfo/>
-                    </Paper>
-                </div>
+
                 <div style={full_box_style}>
                     <Paper zDepth={1}>
                         <DiagnosisInfo/>
@@ -46,6 +37,16 @@ class InfoBoxes extends Component {
                 <div style={full_box_style}>
                     <Paper zDepth={1}>
                         <ProcedureInfo/>
+                    </Paper>
+                </div>
+                <div style={half_box_style}>
+                    <Paper zDepth={1}>
+                        <PatientInfo/>
+                    </Paper>
+                </div>
+                <div style={half_box_style}>
+                    <Paper zDepth={1}>
+                        <InsuranceInfo/>
                     </Paper>
                 </div>
                 <div style={full_box_style}>

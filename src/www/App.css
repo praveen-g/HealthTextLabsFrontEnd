@@ -69,8 +69,9 @@
 }
 
 .infoBox th {
-     font-size: 15px!important;
+     font-size: 16px!important;
+     color: #3498db !important;
  }
 .infoBox td {
-    font-size: 15px!important;
+    font-size: 16px!important;
 }

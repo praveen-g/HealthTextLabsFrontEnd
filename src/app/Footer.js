@@ -9,8 +9,9 @@ import Popover from 'material-ui/Popover';
 import IconLocationOn from 'material-ui/svg-icons/communication/location-on';
 import PatientTimeline from './bottomNav/PatientTimeline'
 import SplitPane from 'react-split-pane'
+
 const calendarIcon = <FontIcon className="fa fa-calendar"></FontIcon>;
-const dashboardIcon = <FontIcon className="fa fa-dashboard"></FontIcon>;
+const dashboardIcon = <FontIcon className="fa fa-line-chart"></FontIcon>;
 const nearbyIcon = <IconLocationOn />;
 
 /**
@@ -56,12 +57,12 @@ class Footer extends Component {
         var nav = <Paper zDepth={2} className='footer'>
             <BottomNavigation selectedIndex={this.state.selectedIndex} ref={(e) => { this.state.anchorEl = e; }}>
                 <BottomNavigationItem
-                    label="Timeline"
+                    label="Advanced Timeline"
                     icon={calendarIcon}
                     onTouchTap={() => this.select(0)}
                     />
                 <BottomNavigationItem
-                    label="Dashboard"
+                    label="Summery Timeline"
                     icon={dashboardIcon}
                     onTouchTap={() => this.select(1)}
                     />
@@ -94,7 +95,7 @@ class Footer extends Component {
                     onRequestClose={this.handleDashClose}
                     >
                     <Paper zDepth={2}>
-
+                        <iframe style={{"width":"100%", "height":"1000px"}} src="/horizontal-timeline/index.html"></iframe>
                     </Paper>
                 </Popover>
             </div>
