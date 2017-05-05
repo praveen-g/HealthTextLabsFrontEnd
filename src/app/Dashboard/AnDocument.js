@@ -42,7 +42,7 @@ class AnDocument extends Component {
         return (
             <Paper zDepth={1}>
             	 <Toggle
-                      label="Toggle Labels:"
+                      label="Highlights:"
             		  defaultToggled={this.state.toggleState}
                       style={{textAlign:'left', padding:'0.5%', float:'left', clear:'both', width:'30%', backgroundColor:'#e8e8e8'}}
                       onToggle={this.handleChange.bind(this)}
