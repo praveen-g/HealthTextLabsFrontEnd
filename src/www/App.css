@@ -67,3 +67,10 @@
     position: fixed;
     bottom: 100px;
 }
+
+.infoBox th {
+     font-size: 15px!important;
+ }
+.infoBox td {
+    font-size: 15px!important;
+}

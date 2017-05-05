@@ -27,6 +27,10 @@ class Upload extends Component {
 
     };
 
+    handlUpload(){
+        this.props.history.push('/dash')
+    }
+
     render() {
         const actions = [
             <input type="file" name="name"/>

@@ -14,7 +14,7 @@ class InsuranceInfo extends Component {
 
     render() {
         return (
-            <Table>
+            <Table className="infoBox">
                 <TableHeader displaySelectAll={false}>
                     <TableRow>
                         <TableHeaderColumn colSpan="2" tooltip="Patient Info" style={{textTransform: 'uppercase'}}>

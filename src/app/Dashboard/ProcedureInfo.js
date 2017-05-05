@@ -15,7 +15,7 @@ class ProcedureInfo extends Component {
 
     render() {
         return (
-            <Table>
+            <Table className="infoBox">
                 <TableHeader displaySelectAll={false}>
                     <TableRow>
                         <TableHeaderColumn colSpan="6" tooltip="Patient Info"

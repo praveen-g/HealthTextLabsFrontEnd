@@ -13,7 +13,7 @@ class InsuranceInfo extends Component {
 
     render() {
         return (
-            <Table>
+            <Table className="infoBox">
                 <TableHeader displaySelectAll={false}>
                     <TableRow>
                         <TableHeaderColumn colSpan="4" tooltip="Patient Info"

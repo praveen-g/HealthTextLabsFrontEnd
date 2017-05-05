@@ -48,6 +48,7 @@ var docuStyle={
     width: '48%',
     //textAlign: 'center',
     display: 'inline-block',
+    fontSize: '14px'
 }
 
 class App extends Component {

@@ -55,7 +55,6 @@ class InfoBoxes extends Component {
                 </div>
             </div>
 
-
         );
     }
 

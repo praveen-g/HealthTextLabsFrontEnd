@@ -14,7 +14,7 @@ class PatientInfo extends Component {
 
     render() {
         return (
-            <Table>
+            <Table className="infoBox">
                 <TableHeader displaySelectAll={false}>
                     <TableRow>
                         <TableHeaderColumn colSpan="2" tooltip="Patient Info" style={{textTransform: 'uppercase'}}>
@@ -26,7 +26,6 @@ class PatientInfo extends Component {
                     <TableRow>
                         <TableRowColumn>Name:</TableRowColumn>
                         <TableRowColumn>John Smith</TableRowColumn>
-
                     </TableRow>
                     <TableRow>
                         <TableRowColumn>Address:</TableRowColumn>
