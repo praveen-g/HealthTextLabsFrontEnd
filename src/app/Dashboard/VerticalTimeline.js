@@ -7,6 +7,7 @@ import {
   Step,
   Stepper,
   StepLabel,
+  StepContent,
 } from 'material-ui/Stepper';
 import FontIcon from 'material-ui/FontIcon';
 import RaisedButton from 'material-ui/RaisedButton';
